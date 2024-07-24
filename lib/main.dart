@@ -25,6 +25,57 @@ class ContactCard extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Professional Contact Card'),
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text(
+                'Menu',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text('Home'),
+              onTap: () {
+                // Handle Home tap
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.person),
+              title: const Text('Profile'),
+              onTap: () {
+                // Handle Profile tap
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.contact_mail),
+              title: const Text('Contact'),
+              onTap: () {
+                // Handle Contact tap
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('Settings'),
+              onTap: () {
+                // Handle Settings tap
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
       body: Stack(
         children: [
           Container(
@@ -75,7 +126,7 @@ class ContactCard extends StatelessWidget {
                       'My role involves implementing security measures, monitoring '
                       'for potential breaches, and responding to incidents. I work '
                       'with various tools and technologies to safeguard sensitive '
-                      'information and ensure the integrity and confidentiality.',
+                      'information and ensure the integrity, and confidentiality.',
                       style: GoogleFonts.lato(
                         textStyle: TextStyle(
                           fontSize: 16,
